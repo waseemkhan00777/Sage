@@ -1,0 +1,284 @@
+.header {
+    background-color: #F4F4F4;
+    padding: 80px 10px 30px 10px;
+    margin : 0px auto;
+    overflow: hidden;
+}
+
+.mainGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px , 1fr));
+    padding: 20px 10px;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    z-index: 2;
+    /* gap:20px; */
+}
+
+.heading{
+    font-size: 60px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    margin : 20px 0px;
+    color:#333333;
+}
+.heading span{
+    display:block;
+}
+
+.headerBtn{
+    background-color: #42B029 ;
+    color:#fff;
+    width: 100%;
+    max-width: 230px;
+    padding: 5px;
+    margin: 20px 0px;
+    position: relative;
+    border: none;
+    outline: none;
+}
+
+.backImage{
+    position: absolute;
+    right: -200px;
+    top:-220px;
+    width:800px;
+    z-index: 1;
+}
+
+.bannerImage{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+
+/* second section */
+
+.teamArrow{
+    padding: 5px 0px 20px 0px;
+    background-color: #F4F4F4;
+}
+
+.secondSectionGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px , 1fr));
+    padding: 5px 30px;
+    align-items: center;
+    justify-items: center;
+    gap:30px;
+    grid-template-areas: "a b";
+}
+.arrowImg{
+    grid-area: a;
+}
+.arrowImg img {
+    width: 100%;
+    max-width: 600px;
+}
+
+.teamArrowBtn{
+    background-color: #42B029 ;
+    color:#fff;
+    width: 100%;
+    max-width: 180px;
+    padding: 10px;
+    margin: 20px 0px;
+    border: none;
+    outline: none;
+    margin-right: 30px;
+}
+
+.arrowText{
+    justify-self: center;
+    max-width: 500px;
+    grid-area: b;
+}
+
+.arrowText p{
+    color : #4F4F4F;
+    padding: 3px;
+}
+
+.headingBoarding{
+    color:#333333;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* thrid section */
+.thirdSection{
+    padding: 10px 0;
+    background-color: #F4F4F4;
+}
+
+.thirdSectionGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px , 1fr));
+    padding: 10px 15px;
+    justify-items: center;
+    align-items: center;
+    gap:30px;
+}
+.storyText{
+    justify-self: center;
+    max-width: 500px;
+}
+
+.storyText p{
+    color : #4F4F4F;
+    padding: 3px;
+}
+
+.headingStory{
+    color:#333333;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.teamNameImage img{
+    width: 100%;
+    max-width: 700px;
+}
+
+/* call to action */
+.callToaction{
+    padding: 20px 0px;
+    position: relative;
+    margin: 30px 0px;
+}
+
+.callToactionGrid{
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 41.21%, rgba(255, 255, 255, 0) 106.01%), #42B029;
+    align-items: center;
+    padding: 10px;
+    justify-items: end;
+    color: #fff;
+    margin:10px 50px;
+    height: 250px;
+    gap:20px;
+}
+.callToactionGrid p{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.ctaHeading{
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.ctaBtn{
+    color: #42B029 ;
+    background-color:#fff;
+    width: 100%;
+    max-width: 180px;
+    padding: 10px;
+    margin: 20px 0px;
+    border: none;
+    outline: none;
+}
+
+.person img{
+    position: absolute;
+    top:-150px;
+    right: 0;
+    width: 450px;
+}
+
+/* tablet */
+@media(max-width: 1200px){
+    .heading{
+        font-size: 52px;
+    }
+    .backImage{
+        right: -260px;
+        top: -200px;
+        width: 700px;
+    }
+    .bannerImage{
+        width: 600px;
+    }
+}
+
+@media(max-width: 1000px){
+
+    .heading{
+        font-size: 36px;
+    }
+    .backImage{
+        right: -200px;
+        top: -250px;
+        width: 600px;
+    }
+    .bannerImage{
+        width: 400px;
+    }
+    .person img{
+       
+        top:-110px;
+        right: 0;
+        width: 350px;
+    }
+}
+
+/* mobile phone */
+
+@media(max-width : 650px){
+    .header {
+    
+        padding: 80px 10px 30px 10px;
+      
+    }
+    .mainGrid{
+        justify-items: stretch;
+    }
+    .heading{
+        font-size: 32px;
+    }
+    .backImage{
+        right: -200px;
+        top: 250px;
+        width: 350px;
+    }
+    .bannerImage{
+        width: 100%;
+    }
+    .headerBtn{
+        max-width: 100%;
+    }
+    .teamArrowBtn{
+        max-width: 100%;
+    }
+
+    .secondSectionGrid{
+        grid-template-areas: 
+        'b'
+        'a';
+    }
+    .callToactionGrid{
+        grid-template-columns: 1fr;
+        justify-items: stretch;
+        padding: 30px;
+        text-align: center;
+        height: 330px;
+        margin: 0;
+    }
+    .ctaBtn{
+        justify-self: stretch;
+        max-width: 100%;
+    }
+    .person img{
+        display:none;
+    }
+}
+@media only screen and (max-width:400px){
+    /* .arrowImg img {
+        width: 80%;
+        max-width: 600px;
+    }    */
+}
